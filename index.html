@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>SamaVolaille</title>
 
@@ -16,25 +18,40 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#F6F4EF;
+
+background:#f8f6f0;
 color:#222;
+
 }
 
 header{
 
 background:white;
 padding:18px;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
 
 }
 
 .logo{
 
 font-size:28px;
+
 font-weight:bold;
+
+color:#15803D;
 
 }
 
@@ -44,24 +61,82 @@ color:#F59E0B;
 
 }
 
+nav{
+
+display:none;
+
+}
+
 .menu{
 
 font-size:28px;
+
+cursor:pointer;
+
+}
+
+.sidebar{
+
+position:fixed;
+
+right:-280px;
+
+top:0;
+
+height:100vh;
+
+width:280px;
+
+background:white;
+
+transition:.4s;
+
+padding:30px;
+
+box-shadow:-5px 0 20px rgba(0,0,0,.1);
+
+z-index:9999;
+
+}
+
+.sidebar.active{
+
+right:0;
+
+}
+
+.sidebar a{
+
+display:block;
+
+padding:16px 0;
+
+text-decoration:none;
+
+color:#222;
+
+font-size:18px;
+
+border-bottom:1px solid #eee;
 
 }
 
 .hero{
 
-padding:30px;
+padding:40px 25px;
 
 }
 
 .badge{
 
-background:white;
 display:inline-block;
+
 padding:10px 18px;
+
+background:white;
+
 border-radius:30px;
+
 margin-bottom:25px;
 
 }
@@ -69,13 +144,14 @@ margin-bottom:25px;
 h1{
 
 font-size:42px;
+
 line-height:1.2;
 
 }
 
 .green{
 
-color:#16A34A;
+color:#15803D;
 
 }
 
@@ -87,34 +163,44 @@ color:#F59E0B;
 
 .description{
 
-margin-top:20px;
+margin-top:18px;
+
+line-height:1.7;
+
 color:#666;
-font-size:20px;
-line-height:1.8;
+
+font-size:18px;
 
 }
 
 .buttons{
 
 display:flex;
+
 gap:15px;
-margin-top:30px;
+
+margin-top:25px;
 
 }
 
 .btn{
 
-padding:16px 30px;
-border-radius:12px;
-font-size:20px;
-font-weight:bold;
+padding:16px 25px;
+
 border:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+cursor:pointer;
 
 }
 
 .primary{
 
 background:#15803D;
+
 color:white;
 
 }
@@ -127,77 +213,181 @@ background:white;
 
 .search{
 
-padding:30px;
+padding:25px;
 
 }
 
-input{
+.search input{
 
 width:100%;
+
 padding:18px;
+
 border-radius:12px;
+
 border:1px solid #ddd;
-font-size:18px;
+
+margin-bottom:12px;
+
+font-size:17px;
 
 }
 
-.search-btn{
+.search button{
 
-margin-top:15px;
 width:100%;
+
 padding:18px;
-background:#15803D;
-color:white;
-font-size:22px;
+
 border:none;
+
+background:#15803D;
+
+color:white;
+
 border-radius:12px;
+
+font-size:18px;
 
 }
 
 .section{
 
-padding:30px;
+padding:25px;
 
 }
 
 .title{
 
-font-size:35px;
+font-size:30px;
+
 font-weight:bold;
-margin-bottom:25px;
+
+margin-bottom:20px;
 
 }
 
 .grid{
 
 display:grid;
+
 grid-template-columns:1fr 1fr;
-gap:20px;
+
+gap:15px;
 
 }
 
 .card{
 
 background:white;
-padding:35px;
-border-radius:20px;
+
+padding:25px;
+
+border-radius:18px;
+
 text-align:center;
 
-box-shadow:0 5px 20px rgba(0,0,0,.04);
+box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-3px);
 
 }
 
 .icon{
 
 font-size:35px;
-margin-bottom:15px;
+
+margin-bottom:10px;
 
 }
 
 .name{
 
-font-size:26px;
+font-size:22px;
+
 font-weight:bold;
+
+}
+
+.annonce{
+
+background:white;
+
+padding:20px;
+
+border-radius:18px;
+
+margin-bottom:18px;
+
+box-shadow:0 3px 15px rgba(0,0,0,.05);
+
+}
+
+.price{
+
+color:#15803D;
+
+font-size:24px;
+
+font-weight:bold;
+
+margin-top:10px;
+
+}
+
+.city{
+
+margin-top:8px;
+
+color:#666;
+
+}
+
+.whatsapp{
+
+margin-top:15px;
+
+background:#15803D;
+
+color:white;
+
+padding:14px;
+
+border:none;
+
+width:100%;
+
+border-radius:12px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+footer{
+
+background:white;
+
+padding:35px;
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+.hidden{
+
+display:none;
 
 }
 
@@ -215,13 +405,41 @@ Sama<span>Volaille</span>
 
 </div>
 
-<div class="menu">
+<div class="menu"
+
+onclick="menu()">
 
 ☰
 
 </div>
 
 </header>
+
+<div class="sidebar"
+
+id="sidebar">
+
+<a href="#">
+
+Accueil</a>
+
+<a href="#categories">
+
+Catégories</a>
+
+<a href="#annonces">
+
+Annonces</a>
+
+<a href="#publier">
+
+Publier</a>
+
+<a href="#contact">
+
+Contact</a>
+
+</div>
 
 <section class="hero">
 
@@ -251,20 +469,25 @@ en toute confiance
 
 <p class="description">
 
-Relier les éleveurs aux acheteurs au Sénégal.
+Relier les éleveurs aux acheteurs partout au Sénégal.
+
 Publiez gratuitement vos annonces.
 
 </p>
 
 <div class="buttons">
 
-<button class="btn primary">
+<button class="btn primary"
+
+onclick="annonces()">
 
 Parcourir
 
 </button>
 
-<button class="btn secondary">
+<button class="btn secondary"
+
+onclick="publier()">
 
 Publier
 
@@ -272,13 +495,13 @@ Publier
 
 </div>
 
-</section>
+  </section>
+  <section class="search">
 
-<section class="search">
+<input id="searchInput"
+placeholder="Rechercher une volaille">
 
-<input placeholder="Rechercher une volaille">
-
-<button class="search-btn">
+<button onclick="searchAds()">
 
 Rechercher
 
@@ -286,7 +509,9 @@ Rechercher
 
 </section>
 
-<section class="section">
+<section class="section"
+
+id="categories">
 
 <div class="title">
 
@@ -369,70 +594,255 @@ Oies
 </div>
 
 </div>
-  <section style="padding:40px 20px;">
-
-<h2 style="font-size:36px;margin-bottom:25px;">
-Annonces récentes
-</h2>
-
-<div style="
-background:white;
-padding:20px;
-border-radius:20px;
-margin-bottom:20px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-">
-
-<h3>Poulets de chair</h3>
-
-<p>📍 Dakar</p>
-
-<p style="color:green;font-weight:bold;">
-25 000 FCFA
-</p>
-
-<button style="
-background:#0c8f39;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:10px;
-">
-WhatsApp
-</button>
-
-</div>
-
-<div style="
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-">
-
-<h3>Canards</h3>
-
-<p>📍 Thiès</p>
-
-<p style="color:green;font-weight:bold;">
-18 000 FCFA
-</p>
-
-<button style="
-background:#0c8f39;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:10px;
-">
-WhatsApp
-</button>
-
-</div>
-
-  </section>
 
 </section>
+
+<section class="section"
+
+id="annonces">
+
+<div class="title">
+
+Annonces récentes
+
+</div>
+
+<div class="annonce"
+
+data-name="Poulets">
+
+<h3>
+
+Poulets de chair
+
+</h3>
+
+<p class="city">
+
+📍 Dakar
+
+</p>
+
+<div class="price">
+
+25 000 FCFA
+
+</div>
+
+<button class="whatsapp"
+
+onclick="window.open('https://wa.me/221770000000')">
+
+WhatsApp
+
+</button>
+
+</div>
+
+<div class="annonce"
+
+data-name="Canards">
+
+<h3>
+
+Canards de Pékin
+
+</h3>
+
+<p class="city">
+
+📍 Thiès
+
+</p>
+
+<div class="price">
+
+18 000 FCFA
+
+</div>
+
+<button class="whatsapp"
+
+onclick="window.open('https://wa.me/221770000000')">
+
+WhatsApp
+
+</button>
+
+</div>
+
+<div class="annonce"
+
+data-name="Pintades">
+
+<h3>
+
+Pintades locales
+
+</h3>
+
+<p class="city">
+
+📍 Kaolack
+
+</p>
+
+<div class="price">
+
+15 000 FCFA
+
+</div>
+
+<button class="whatsapp"
+
+onclick="window.open('https://wa.me/221770000000')">
+
+WhatsApp
+
+</button>
+
+</div>
+
+</section>
+
+<section class="section hidden"
+
+id="publier">
+
+<div class="title">
+
+Publier une annonce
+
+</div>
+
+<input placeholder="Titre">
+
+<br><br>
+
+<input placeholder="Ville">
+
+<br><br>
+
+<input placeholder="Prix">
+
+<br><br>
+
+<input placeholder="Téléphone WhatsApp">
+
+<br><br>
+
+<input placeholder="Quantité">
+
+<br><br>
+
+<button class="search-btn">
+
+Publier
+
+</button>
+
+</section>
+
+<footer id="contact">
+
+<h2>
+
+SamaVolaille
+
+</h2>
+
+<br>
+
+<p>
+
+Marketplace avicole du Sénégal
+
+</p>
+
+<br>
+
+<p>
+
+WhatsApp • Facebook • Email
+
+</p>
+
+  </footer>
+  <script>
+
+function menu(){
+
+document.getElementById("sidebar")
+
+.classList.toggle("active");
+
+}
+
+function annonces(){
+
+document.getElementById("annonces")
+
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+function publier(){
+
+let section = document.getElementById("publier");
+
+section.classList.toggle("hidden");
+
+section.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+function searchAds(){
+
+let input = document
+
+.getElementById("searchInput")
+
+.value
+
+.toLowerCase();
+
+let annonces = document
+
+.querySelectorAll(".annonce");
+
+annonces.forEach(item=>{
+
+let name = item
+
+.getAttribute("data-name")
+
+.toLowerCase();
+
+if(name.includes(input)){
+
+item.style.display="block";
+
+}
+
+else{
+
+item.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
 
 </body>
 
