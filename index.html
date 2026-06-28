@@ -8,134 +8,197 @@
 
 <style>
 
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#F8F6EF;
+}
+
+body{
+background:#F6F4EF;
 color:#222;
 }
 
 header{
+
 background:white;
-padding:15px;
+padding:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+
 }
 
 .logo{
+
 font-size:28px;
 font-weight:bold;
+
 }
 
 .logo span{
-color:#F28C28;
+
+color:#F59E0B;
+
+}
+
+.menu{
+
+font-size:28px;
+
 }
 
 .hero{
-padding:25px;
+
+padding:30px;
+
 }
 
 .badge{
+
+background:white;
 display:inline-block;
-padding:8px 14px;
-background:#fff;
-border-radius:20px;
-font-size:14px;
-margin-bottom:15px;
+padding:10px 18px;
+border-radius:30px;
+margin-bottom:25px;
+
 }
 
 h1{
+
 font-size:42px;
 line-height:1.2;
-margin:0;
+
 }
 
 .green{
-color:#0A7A32;
+
+color:#16A34A;
+
 }
 
 .orange{
-color:#F28C28;
+
+color:#F59E0B;
+
 }
 
-.desc{
+.description{
+
 margin-top:20px;
-font-size:18px;
-line-height:1.7;
 color:#666;
+font-size:20px;
+line-height:1.8;
+
 }
 
 .buttons{
-margin-top:25px;
+
 display:flex;
 gap:15px;
+margin-top:30px;
+
 }
 
 .btn{
-padding:14px 24px;
-border-radius:10px;
-border:none;
-font-size:17px;
+
+padding:16px 30px;
+border-radius:12px;
+font-size:20px;
 font-weight:bold;
+border:none;
+
 }
 
 .primary{
-background:#0A7A32;
+
+background:#15803D;
 color:white;
+
 }
 
 .secondary{
+
 background:white;
+
 }
 
 .search{
-margin-top:35px;
-display:flex;
-flex-direction:column;
-gap:12px;
+
+padding:30px;
+
 }
 
-.search input{
-padding:15px;
+input{
+
+width:100%;
+padding:18px;
 border-radius:12px;
 border:1px solid #ddd;
+font-size:18px;
+
 }
 
-.search button{
-background:#0A7A32;
+.search-btn{
+
+margin-top:15px;
+width:100%;
+padding:18px;
+background:#15803D;
 color:white;
-padding:15px;
+font-size:22px;
 border:none;
 border-radius:12px;
-font-size:18px;
+
 }
 
-.categories{
-padding:25px;
+.section{
+
+padding:30px;
+
+}
+
+.title{
+
+font-size:35px;
+font-weight:bold;
+margin-bottom:25px;
+
 }
 
 .grid{
+
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:15px;
+gap:20px;
+
 }
 
 .card{
+
 background:white;
-padding:18px;
-border-radius:18px;
+padding:35px;
+border-radius:20px;
 text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+
+box-shadow:0 5px 20px rgba(0,0,0,.04);
+
 }
 
-.card img{
-width:80px;
+.icon{
+
+font-size:35px;
+margin-bottom:15px;
+
 }
 
-.card h3{
-margin-top:10px;
+.name{
+
+font-size:26px;
+font-weight:bold;
+
 }
 
 </style>
@@ -147,33 +210,48 @@ margin-top:10px;
 <header>
 
 <div class="logo">
+
 Sama<span>Volaille</span>
+
 </div>
 
+<div class="menu">
+
 ☰
+
+</div>
 
 </header>
 
 <section class="hero">
 
 <div class="badge">
+
 Marketplace 100% sénégalaise
+
 </div>
 
 <h1>
 
 Achetez et vendez vos
 
-<span class="green">volailles</span>
+<span class="green">
 
-<span class="orange">en toute confiance</span>
+volailles
+
+</span>
+
+<span class="orange">
+
+en toute confiance
+
+</span>
 
 </h1>
 
-<p class="desc">
+<p class="description">
 
 Relier les éleveurs aux acheteurs au Sénégal.
-
 Publiez gratuitement vos annonces.
 
 </p>
@@ -194,54 +272,100 @@ Publier
 
 </div>
 
-<div class="search">
+</section>
+
+<section class="search">
 
 <input placeholder="Rechercher une volaille">
 
-<button>
+<button class="search-btn">
 
 Rechercher
 
 </button>
 
-</div>
-
 </section>
 
-<section class="categories">
+<section class="section">
 
-<h2>Catégories populaires</h2>
+<div class="title">
+
+Catégories populaires
+
+</div>
 
 <div class="grid">
 
 <div class="card">
-🐔
-<h3>Poulets</h3>
+
+<div class="icon">🐔</div>
+
+<div class="name">
+
+Poulets
+
+</div>
+
 </div>
 
 <div class="card">
-🦆
-<h3>Canards</h3>
+
+<div class="icon">🦆</div>
+
+<div class="name">
+
+Canards
+
+</div>
+
 </div>
 
 <div class="card">
-🦃
-<h3>Dindes</h3>
+
+<div class="icon">🦃</div>
+
+<div class="name">
+
+Dindes
+
+</div>
+
 </div>
 
 <div class="card">
-🐦
-<h3>Pintades</h3>
+
+<div class="icon">🐦</div>
+
+<div class="name">
+
+Pintades
+
+</div>
+
 </div>
 
 <div class="card">
-🕊
-<h3>Pigeons</h3>
+
+<div class="icon">🕊️</div>
+
+<div class="name">
+
+Pigeons
+
+</div>
+
 </div>
 
 <div class="card">
-🪿
-<h3>Oies</h3>
+
+<div class="icon">🪿</div>
+
+<div class="name">
+
+Oies
+
+</div>
+
 </div>
 
 </div>
@@ -250,4 +374,4 @@ Rechercher
 
 </body>
 
-  </html>
+</html>
